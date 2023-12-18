@@ -24,5 +24,10 @@ export class TripListingComponent implements OnInit {
     localStorage.setItem("tripCode", trip.code);
     this.router.navigate(['edit-trip']);
   }
+
+  public isLoggedIn(): boolean {    
+    return this.authenticationService.isLoggedIn();  
+  } 
+  
  } 
  
